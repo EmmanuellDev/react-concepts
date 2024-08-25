@@ -1,10 +1,26 @@
 import { Component } from "react"
 
 class ClassBasedComponents extends Component {
+
+    state = {
+        showText : false,
+    };
+
+    handleClick = () => {
+        this.setState({
+            showText: !this.state.showText,
+        });
+    };
+
     render() {
+        console.log(this.state);
+        
         return (
             <div>
-                <h4>This is a Class Based Component</h4>
+                {
+                    this.state.showText ? <h4>This is a Class Based Component</h4> : null
+                }
+                <button onClick={this.handleClick}>toggle text</button>
             </div>
         );
     }

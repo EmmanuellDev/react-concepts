@@ -1,14 +1,15 @@
 import Productitem from "./components/product-items";
 
-const dummyProductData = ["product1", "product2", "product3"];
 
-function ProductList () {
+
+function ProductList ({name, city, productsList}) {
     return (
         <div>
             <h3>ECommerce Products List</h3>
+            <h4>Name is {name}, he belongs to this city {city}</h4>
             <ul>
-                {dummyProductData.map ((item, index) => (
-                <li key={index}>{item}</li>
+                {productsList.map ((item, index) => (
+                    <Productitem singleProductName={item} key={index} />
             ))}
             </ul>
             {/* <Productitem /> */}

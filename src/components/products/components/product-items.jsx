@@ -6,10 +6,10 @@ function ButtonComponent () {
     );
 }
 
-function Productitem () {
+function Productitem ({singleProductName, key}) {
     return (
-        <div>
-            <h4>Product - 1</h4>
+        <div key={key}>
+            <p>{singleProductName}</p>
             <ButtonComponent />
         </div>
     );
