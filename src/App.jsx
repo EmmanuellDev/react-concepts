@@ -3,6 +3,7 @@ import './App.css'
 import ClassBasedComponents from './components/class-b-comp'
 import FunctionBasedComponents from './components/func-b-comp'
 import ProductList from './components/products';
+import Counter from './components/products/components/Counter';
 
 const dummyProductData = ["Product1", "Product2", "Product3"];
 
@@ -11,8 +12,9 @@ function App() {
   return (
     <div>
       <h1>React JS Components 2024</h1>
-      <ClassBasedComponents />
-      {/* <FunctionBasedComponents />
+      <Counter />
+      {/* <ClassBasedComponents />
+      <FunctionBasedComponents />
       <ProductList productsList={dummyProductData} name="Emman"  city="Chennai" /> */}
     </div>
   );
